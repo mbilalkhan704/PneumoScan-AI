@@ -108,5 +108,6 @@ Developed as part of the **Artificial Intelligence course (BSCS-515)** at **Univ
 
 ## 📄 License
 
-This project is for educational use. Contact the authors before reuse in commercial applications.
+This project is licensed under the [MIT License](LICENSE).  
+Feel free to use, modify, and distribute it with proper attribution.
 
