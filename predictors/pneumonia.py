@@ -28,7 +28,13 @@ def predict_pneumonia(image_path):
     image = np.expand_dims(image, axis=0)  # Add batch dimension
     
     # Get the prediction
-    prob = loaded_model.predict(image)[0][0]
-    label = "PNEUMONIA" if prob > 0.5 else "NORMAL"
+    prob = float(loaded_model.predict(image)[0][0])
+
+    if prob > 0.5:
+        label = "PNEUMONIA"
+        confidence = prob
+    else:
+        label = "NORMAL"
+        confidence = 1 - prob
     
-    return label, prob
+    return label, confidence
